@@ -2,6 +2,7 @@ from Tkinter import *
 import angles
 import tkFileDialog
 import tkMessageBox
+import os
 
 class Gui():
   def __init__(self,root):
@@ -32,6 +33,9 @@ class Gui():
   def add_files(self):
     """ Add files to the list """
     files=tkFileDialog.askopenfilenames(multiple=True)
+    if os.name=="nt":
+	files=files.replace("{","").replace("}","")
+        files=files.split()
     for f in files: 
       self.lb.insert(END,f)
       
