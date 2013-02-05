@@ -6,9 +6,9 @@
 novel dyssynchrony measurement from Speckle-Tracking Strain
 echocardiograpy" />
 <title>Dyssynchrony</title>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
 <script src="vendor/jquery-1.8.3.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
 </head>
 <body>
 <div class="container">
@@ -39,8 +39,9 @@ Software. This software currently supports data exports from Visualsonic
 and TomTec strain software packages.
 </p>
 <a href="dyssynchrony-0.1-win32.zip" class="btn btn-success">Download <span
-class="icon-arrow-down"></span></a> <a
+class="icon-arrow-down"></span></a><!-- <a
 href="http://github.com/mihi-tr/dyssynchrony" class="btn">Source Code</a>
+-->
 <p>If you use the software in research please cite:
 <pre>
  Michael Bauer, Susan Cheng, Kazumasa Unno, Soeun Ngoy, Fen-Chiung Lin, Ronglih Liao;
@@ -48,7 +49,26 @@ href="http://github.com/mihi-tr/dyssynchrony" class="btn">Source Code</a>
  ; Submitted for publication
 </pre>
 </p>
-
+<h2>Instructions to use</h2>
+<p>Please use the following instructions to use the program:
+<ul>
+<li>Download the program above</li>
+<li>Unpack the zip archive (the program will likely fail if it is not fully
+unpacked)</li>
+<li>Find the file <code >gui</code> in the directory and
+doubleclick to run it</li>
+<li>Add "Full Data" exports from either VevoStrain or TomTec strain via the
+<code >+</code> button</li>
+<li>If you added a file you don't want to have in the final analysis, you
+can remove it using <code >-</code></li>
+<li>Click the <code >Save as...</code> button to select a file
+to save the results</li>
+<li>Click on <code >Go</code> to run the analysis</li>
+<li>You can now open the results file in Excel or your favorite Spreadsheet
+program</li>
+<li>It will contain a "mean strain angle" for the strain measured - the
+bigger the "mean angle" the more out of sync is the cardiac cycle</li>
+</ul>
 <div class="footer">
 &#xa9; 2011-2012 By Brigham and Womens Hospital, <a href="http://tentacleriot.eu">Michael Bauer</a>
 </div>
