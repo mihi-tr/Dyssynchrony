@@ -116,10 +116,10 @@ class Strain:
 			self.param["Shear"]=createaverages(self,"Shear")
 			self.param["ShearRate"]=createaverages(self,"ShearRate")
 			self.param["Strain"]=createaverages(self,"Strain")
-		except:
+		except Exception as e:
 			print(p["filename"])
+			print e
 			return False
-			
 		
 def returnarray(file,spc):
 	""" returns an numpy array object from a file, continues to read
@@ -204,7 +204,7 @@ def parsecsv(file,parameters):
 			k=re.compile("^"+key)
 			key=key.strip()
 			if k.search(linecols[0]):
-				if len(linecols[1])>1:
+				if len(linecols)>1 and len(linecols[1])>1:
 					p[key]=linecols[1]
 				else:
 					p[key]=returnarray(file,",")
