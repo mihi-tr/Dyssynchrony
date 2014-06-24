@@ -12,7 +12,9 @@ def calculateAngles(vectors):
   ret=[]
   for i in range(0,len(vectors)):
     for v2 in vectors[i+1:]:
-      ret.append(calculateAngle(vectors[i],v2))
+      x = calculateAngle(vectors[i],v2)
+      if not numpy.isnan(x):
+        ret.append(x)
 
   return(ret)
 
