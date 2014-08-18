@@ -39,6 +39,7 @@ def process(outfile,files):
     s.getdata({"filename":filename})
     line["name"]=filename;
     for p in parameters:
+      print s.param.keys()
       a=getAngleStatistics(s.param[p])
       for v in values:
         line["%s %s"%(p,v)]=str(a[v])

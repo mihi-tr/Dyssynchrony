@@ -109,7 +109,7 @@ class Strain:
 			if "filename" in p:
 				f=open(p["filename"],"r")
 			else: return False
-			self.param=parse(f,self.parameters)
+			self.param=parse(f,self.parameters)            
 			self.param["StrainRate"]=createaverages(self,"StrainRate")
 			self.param["RadialStrain"]=createaverages(self,"RadialStrain")
 			self.param["RadialStrainRate"]=createaverages(self,"RadialStrainRate")
