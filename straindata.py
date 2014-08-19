@@ -110,12 +110,6 @@ class Strain:
 				f=open(p["filename"],"r")
 			else: return False
 			self.param=parse(f,self.parameters)            
-			self.param["StrainRate"]=createaverages(self,"StrainRate")
-			self.param["RadialStrain"]=createaverages(self,"RadialStrain")
-			self.param["RadialStrainRate"]=createaverages(self,"RadialStrainRate")
-			self.param["Shear"]=createaverages(self,"Shear")
-			self.param["ShearRate"]=createaverages(self,"ShearRate")
-			self.param["Strain"]=createaverages(self,"Strain")
 		except:
 			print(p["filename"])
 			return False
@@ -204,7 +198,7 @@ def parsecsv(file,parameters):
 			k=re.compile("^"+key)
 			key=key.strip()
 			if k.search(linecols[0]):
-				if len(linecols[1])>1:
+				if len(linecols) > 1 and len(linecols[1])>1:
 					p[key]=linecols[1]
 				else:
 					p[key]=returnarray(file,",")

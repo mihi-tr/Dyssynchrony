@@ -12,7 +12,12 @@ def calculateAngles(vectors):
   ret=[]
   for i in range(0,len(vectors)):
     for v2 in vectors[i+1:]:
-      ret.append(calculateAngle(vectors[i],v2))
+      if len(vectors[i]) == len(v2):     
+        try:
+            ret.append(calculateAngle(vectors[i][0],v2[0]))
+        except ValueError:
+            print v2
+            pass
 
   return(ret)
 
