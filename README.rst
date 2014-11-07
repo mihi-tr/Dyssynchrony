@@ -11,13 +11,14 @@ How
 Dyssynchrony measurements can be done from "full data" exports from Vevo
 Strain or Tomtec Strain software.
 
-Store the files in a Directory and run dyssynchrony.py
+Store the files in a Directory and run gui.py
 
 
 Installation
 ------------
 
 Linux::
+
   virtualenv venv
   source venv/bin/activate
   pip install -r requirements.txt
