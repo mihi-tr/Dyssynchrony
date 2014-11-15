@@ -198,11 +198,7 @@ def parsecsv(file,parameters):
 			k=re.compile("^"+key)
 			key=key.strip()
 			if k.search(linecols[0]):
-<<<<<<< HEAD
 				if len(linecols) > 1 and len(linecols[1])>1:
-=======
-				if len(linecols)>1 and len(linecols[1])>1:
->>>>>>> 5a77fb844bcf7f7210bf186790c136c95a2afb8c
 					p[key]=linecols[1]
 				else:
 					p[key]=returnarray(file,",")
