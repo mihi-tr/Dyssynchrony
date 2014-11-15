@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="description" value="Software enabling the calculation of a
+novel dyssynchrony measurement from Speckle-Tracking Strain
+echocardiograpy" />
+<title>Dyssynchrony</title>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
+<script src="vendor/jquery-1.8.3.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Dyssynchrony</h1>
+<p>
+The synchronicity of cardiac myocardial function is important for
+maintaining cardiac output. Diseased hearts often develop dyssynchrony
+that, in turn, worsens the performance of an already impaired ventricle.
+Conventional measurements of dyssynchrony are based on the relative timing
+of absolute peak values of strain and strain rate, assessed using
+echocardiography. These methods do not account for the shape and
+progression of strain changes that occur over the course of the cardiac
+cycle.
+</p>
+<p>
+We have developed a new measurement of cardiac dyssynchrony based on
+inner-vector angles of strain changes occurring over the whole cardiac
+cycle. Details regarding the methods and scientific background for this
+approach can be found in <em>Regional Cardiac Dysfunction and Dyssynchrony in a
+Murine Model of Afterload Stress</em> - Michael Bauer, Susan Cheng, Kazumasa
+Unno, Soeun Ngoy, Fen-Chiung Lin, Ronglih Liao [article submitted for
+publication].
+</p>
+<p>
+We have released our software based algorithm used to calculate
+the novel measurement of cardiac dyssynchrony as Free and Open Source
+Software. This software currently supports data exports from Visualsonic
+and TomTec strain software packages.
+</p>
+<a href="dyssynchrony-0.1-win32.zip" class="btn btn-success">Download <span
+class="icon-arrow-down"></span></a><!-- <a
+href="http://github.com/mihi-tr/dyssynchrony" class="btn">Source Code</a>
+-->
+<p>If you use the software in research please cite:
+<pre>
+ Michael Bauer, Susan Cheng, Kazumasa Unno, Soeun Ngoy, Fen-Chiung Lin, Ronglih Liao;
+ Regional Cardiac Dysfunction and Dyssynchrony in a Murine Model of Afterload Stress. 
+ ; Submitted for publication
+</pre>
+</p>
+<h2>Instructions to use</h2>
+<p>Please use the following instructions to use the program:
+<ul>
+<li>Download the program above</li>
+<li>Unpack the zip archive (the program will likely fail if it is not fully
+unpacked)</li>
+<li>Find the file <code >gui</code> in the directory and
+doubleclick to run it</li>
+<li>Add "Full Data" exports from either VevoStrain or TomTec strain via the
+<code >+</code> button</li>
+<li>If you added a file you don't want to have in the final analysis, you
+can remove it using <code >-</code></li>
+<li>Click the <code >Save as...</code> button to select a file
+to save the results</li>
+<li>Click on <code >Go</code> to run the analysis</li>
+<li>You can now open the results file in Excel or your favorite Spreadsheet
+program</li>
+<li>It will contain a "mean strain angle" for the strain measured - the
+bigger the "mean angle" the more out of sync is the cardiac cycle</li>
+</ul>
+<div class="footer">
+&#xa9; 2011-2012 By Brigham and Womens Hospital, <a href="http://tentacleriot.eu">Michael Bauer</a>
+</div>
+</div>
+</body>
+
+</html>

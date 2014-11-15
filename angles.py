@@ -18,7 +18,6 @@ def calculateAngles(vectors):
         except ValueError:
             print v2
             pass
-
   return(ret)
 
 def getAngleStatistics(vectors):
