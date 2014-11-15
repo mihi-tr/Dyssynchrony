@@ -34,18 +34,23 @@ def getAngleStatistics(vectors):
 def tostring(a):
   return ["%f" % b for b in a]
 
-def process(outfile,files):
+def process(outfile,files,dir=False):
   t=vstables.VsTable()
   parameters=["Strain", "StrainRate", "RadialStrain",
   "RadialStrainRate"]
   values=["mean","median","sd"]
   sort=["name"]
+  if dir:
+    sort=sort+["id","view"] 
   sort+=[i+" "+j for i in parameters for j in values]
   for filename in files:
     s=Strain()
     line={};
     s.getdata({"filename":filename})
     line["name"]=filename;
+    if dir:
+      (rest, line["view"]) =os.path.split(os.path.split(filename)[0])
+      line["id"] = os.path.split(rest)[1]
     for p in parameters:
       print s.param.keys()
       a=getAngleStatistics(s.param[p])
