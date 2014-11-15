@@ -3,4 +3,4 @@ import py2exe
 
 
 setup(windows=[{'script':'gui.py',
-}])
+},{'script':'gui2.py'}])
