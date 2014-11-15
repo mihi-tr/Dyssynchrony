@@ -26,7 +26,6 @@ def getAngleStatistics(vectors):
   dist=calculateAngles(vectors)
   # mdist = numpy.ma.masked_array(dist,numpy.isnan(dist))
   mdist = numpy.ma.masked_invalid(dist)
-  print mdist.mean()
   return {"mean":mdist.mean(),
     "median":numpy.median(mdist), 
     "sd":numpy.std(mdist)}
@@ -52,7 +51,6 @@ def process(outfile,files,dir=False):
       (rest, line["view"]) =os.path.split(os.path.split(filename)[0])
       line["id"] = os.path.split(rest)[1]
     for p in parameters:
-      print s.param.keys()
       a=getAngleStatistics(s.param[p])
       for v in values:
         line["%s %s"%(p,v)]=str(a[v])
