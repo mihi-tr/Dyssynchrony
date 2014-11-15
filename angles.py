@@ -24,9 +24,12 @@ def calculateAngles(vectors):
 def getAngleStatistics(vectors):
   """ returns a dict of mean, median and sd """
   dist=calculateAngles(vectors)
-  return {"mean":numpy.average(dist), 
-    "median":numpy.median(dist), 
-    "sd":numpy.std(dist)}
+  # mdist = numpy.ma.masked_array(dist,numpy.isnan(dist))
+  mdist = numpy.ma.masked_invalid(dist)
+  print mdist.mean()
+  return {"mean":mdist.mean(),
+    "median":numpy.median(mdist), 
+    "sd":numpy.std(mdist)}
 
 def tostring(a):
   return ["%f" % b for b in a]
